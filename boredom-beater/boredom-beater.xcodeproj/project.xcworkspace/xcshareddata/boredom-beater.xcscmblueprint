@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "24AB0912E76B7CE9BD87CE0017F5F7AF5F67F0D3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "24AB0912E76B7CE9BD87CE0017F5F7AF5F67F0D3" : 0,
+    "CE9EEFB0354A511A9AB598FC9E8DC6498A266B8F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "28727D6A-A0ED-40C6-9240-E46398CB815D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "24AB0912E76B7CE9BD87CE0017F5F7AF5F67F0D3" : "boredom-beater\/",
+    "CE9EEFB0354A511A9AB598FC9E8DC6498A266B8F" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "boredom-beater",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "boredom-beater\/boredom-beater.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zlarsen\/boredom-beater.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24AB0912E76B7CE9BD87CE0017F5F7AF5F67F0D3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zlarsen\/catcat.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE9EEFB0354A511A9AB598FC9E8DC6498A266B8F"
+    }
+  ]
+}
