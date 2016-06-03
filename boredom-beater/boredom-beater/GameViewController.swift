@@ -10,14 +10,24 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    var press = UIImageView()
-    var green = UIImageView()
-    var timer = UILabel()
+    var timer = NSTimer()
     
+    @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var score: UILabel!
+    @IBOutlet var green: UIButton!
+    @IBOutlet var press: UIButton!
+    
+    @IBAction func pressButton(sender: AnyObject) {
+        startGame()
+    }
+    
+    @IBAction func greenButton(sender: AnyObject) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        green.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,6 +35,13 @@ class GameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func startGame() {
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: #selector(GameViewController.gameOver), userInfo: nil, repeats: true)
+        print("Game has started")
+    }
     
+    func gameOver() {
+        
+    }
 }
 

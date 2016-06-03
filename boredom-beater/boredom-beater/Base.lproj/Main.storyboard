@@ -18,20 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time 10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-co-aco">
-                                <rect key="frame" x="39" y="28" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM3-v7-R5V">
+                                <rect key="frame" x="528" y="27" width="72" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="rqm-AK-pOc"/>
+                                    <constraint firstAttribute="width" constant="72" id="Ygn-G5-EQ4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.9808834716" green="1" blue="0.14898197599999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-VW-3KJ">
-                                <rect key="frame" x="277" y="284.5" width="47" height="30"/>
-                                <state key="normal" title="PRESS">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-VW-3KJ">
+                                <rect key="frame" x="277" y="285" width="47" height="30"/>
+                                <state key="normal" title="Punch">
                                     <color key="titleColor" red="1" green="0.0" blue="0.010267665139986448" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressButton:" destination="NO8-Dp-DDa" eventType="touchUpInside" id="cBL-Pw-rwA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQy-Ys-Tkb">
                                 <rect key="frame" x="491" y="500" width="73" height="55"/>
@@ -42,11 +45,14 @@
                                 <state key="normal" title="+5 Sec">
                                     <color key="titleColor" red="0.042397469187943404" green="1" blue="0.18838217758204412" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="greenButton:" destination="NO8-Dp-DDa" eventType="touchUpInside" id="xSj-Iv-fYZ"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM3-v7-R5V">
-                                <rect key="frame" x="528" y="27" width="72" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time 10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-co-aco">
+                                <rect key="frame" x="9" y="28" width="92" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="Ygn-G5-EQ4"/>
+                                    <constraint firstAttribute="width" constant="92" id="F3f-XZ-Oip"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.9808834716" green="1" blue="0.14898197599999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,14 +63,20 @@
                         <constraints>
                             <constraint firstItem="fNx-VW-3KJ" firstAttribute="centerY" secondItem="qdU-ew-8S5" secondAttribute="centerY" id="1hK-pT-cFN"/>
                             <constraint firstItem="VM3-v7-R5V" firstAttribute="trailing" secondItem="gQy-Ys-Tkb" secondAttribute="trailing" constant="36" id="4dS-rR-y7s"/>
-                            <constraint firstItem="8eG-co-aco" firstAttribute="top" secondItem="ihl-RJ-mOF" secondAttribute="bottom" constant="8" symbolic="YES" id="A8p-hn-Zah"/>
-                            <constraint firstItem="8eG-co-aco" firstAttribute="leading" secondItem="qdU-ew-8S5" secondAttribute="leadingMargin" constant="19" id="CLD-xl-5XS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VM3-v7-R5V" secondAttribute="trailing" constant="-20" id="HIQ-Be-Nkh"/>
+                            <constraint firstItem="8eG-co-aco" firstAttribute="top" secondItem="ihl-RJ-mOF" secondAttribute="bottom" constant="8" symbolic="YES" id="Iyu-KK-3gT"/>
                             <constraint firstItem="4G2-1U-KLY" firstAttribute="top" secondItem="gQy-Ys-Tkb" secondAttribute="bottom" constant="45" id="PKs-eW-Af8"/>
-                            <constraint firstItem="8eG-co-aco" firstAttribute="baseline" secondItem="VM3-v7-R5V" secondAttribute="baseline" constant="1" id="iBl-W3-jgf"/>
+                            <constraint firstItem="VM3-v7-R5V" firstAttribute="top" secondItem="ihl-RJ-mOF" secondAttribute="bottom" constant="7" id="fdh-6q-4FY"/>
+                            <constraint firstItem="8eG-co-aco" firstAttribute="leading" secondItem="qdU-ew-8S5" secondAttribute="leadingMargin" constant="-11" id="k5g-Sz-zbN"/>
                             <constraint firstItem="fNx-VW-3KJ" firstAttribute="centerX" secondItem="qdU-ew-8S5" secondAttribute="centerX" id="pOb-vL-Kh5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="green" destination="gQy-Ys-Tkb" id="hKv-k7-ifo"/>
+                        <outlet property="press" destination="fNx-VW-3KJ" id="u6M-15-D9v"/>
+                        <outlet property="score" destination="VM3-v7-R5V" id="7ew-Vl-AY3"/>
+                        <outlet property="timer" destination="8eG-co-aco" id="8dv-Gf-G4q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZh-mj-cm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +85,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="boredom_beater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="boredom_beater" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -145,6 +157,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-181" y="-314"/>
+        </scene>
+        <!--Instruction View Controller-->
+        <scene sceneID="ukD-gF-q9u">
+            <objects>
+                <viewController storyboardIdentifier="Instructions" id="alO-tW-c6V" customClass="InstructionViewController" customModule="boredom_beater" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Qh-eo-xua"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Eg-RT-Wft"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ccE-1k-Qx9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play Boredom Beater" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Is-Kl-YkA">
+                                <rect key="frame" x="136" y="69" width="329" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="329" id="4UK-QM-9NO"/>
+                                    <constraint firstAttribute="height" constant="79" id="9gK-gR-7vy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9gK-gR-7vy"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xE2-cy-SDR">
+                                <rect key="frame" x="180" y="157" width="240" height="181"/>
+                                <color key="backgroundColor" red="0.85663448949999998" green="0.0" blue="0.80395050430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FDh-Lj-nk5"/>
+                                    <constraint firstAttribute="height" constant="181" id="gWc-cX-g4b"/>
+                                </constraints>
+                                <string key="text">The first thing you do is press start at the home screen. Then you tap the button and you have a limited time to press it once you start. Every ten times you tap the button(not inlcuding start) there will be a small green button that you can press to gain five seconds it has a smaller window of time to press it.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1h-o1-UhJ">
+                                <rect key="frame" x="257" y="377" width="86" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="XgV-BG-VOx"/>
+                                    <constraint firstAttribute="width" constant="86" id="eAA-EH-uco"/>
+                                </constraints>
+                                <state key="normal" title="Play Game">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XgV-BG-VOx"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="playGame:" destination="alO-tW-c6V" eventType="touchUpInside" id="2u1-Mp-MSS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkZ-rK-PRe">
+                                <rect key="frame" x="253" y="457" width="93" height="30"/>
+                                <state key="normal" title="Home Screen">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeScreen:" destination="alO-tW-c6V" eventType="touchUpInside" id="Zhy-br-QDc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85663448952879584" green="0.0" blue="0.80395050433805393" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dkZ-rK-PRe" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" id="4e7-rf-5DC"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="centerY" secondItem="ccE-1k-Qx9" secondAttribute="centerY" id="BJK-b6-tEG"/>
+                            <constraint firstItem="s1h-o1-UhJ" firstAttribute="top" secondItem="xE2-cy-SDR" secondAttribute="bottom" constant="39" id="BsN-ag-IdD"/>
+                            <constraint firstItem="s1h-o1-UhJ" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" id="OJM-Yh-AtX"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" id="atT-cc-Eol"/>
+                            <constraint firstItem="dkZ-rK-PRe" firstAttribute="top" secondItem="s1h-o1-UhJ" secondAttribute="bottom" constant="50" id="fJo-Rh-1Sa"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="top" secondItem="8Is-Kl-YkA" secondAttribute="bottom" constant="58" id="gBJ-q3-sxS"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="top" secondItem="ccE-1k-Qx9" secondAttribute="top" constant="157" id="hqd-1M-wvr"/>
+                            <constraint firstItem="8Is-Kl-YkA" firstAttribute="top" secondItem="1Qh-eo-xua" secondAttribute="bottom" id="jag-6q-x5p"/>
+                            <constraint firstItem="8Is-Kl-YkA" firstAttribute="centerX" secondItem="xE2-cy-SDR" secondAttribute="centerX" id="mSd-5G-u4B"/>
+                            <constraint firstItem="s1h-o1-UhJ" firstAttribute="top" secondItem="xE2-cy-SDR" secondAttribute="bottom" constant="39" id="rg6-zT-eVk"/>
+                            <constraint firstAttribute="bottom" secondItem="s1h-o1-UhJ" secondAttribute="bottom" constant="181" id="uUZ-J3-wCH"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="top" secondItem="8Is-Kl-YkA" secondAttribute="bottom" constant="58" id="v0s-Jp-96o"/>
+                            <constraint firstItem="s1h-o1-UhJ" firstAttribute="centerX" secondItem="xE2-cy-SDR" secondAttribute="centerX" id="ySN-zt-k4d"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jag-6q-x5p"/>
+                                <exclude reference="BJK-b6-tEG"/>
+                                <exclude reference="v0s-Jp-96o"/>
+                                <exclude reference="rg6-zT-eVk"/>
+                                <exclude reference="uUZ-J3-wCH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qix-S7-UQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="-296"/>
         </scene>
     </scenes>
 </document>
