@@ -8,7 +8,7 @@
 
 import UIKit
 
-let gameLength = 1.0
+let gameLength = 10.0
 
 class GameViewController: UIViewController {
     
@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     var press = UIButton()
     var green = UIButton()
     var restartGameButton = UIButton()
+    var newHiScoreLabel = UILabel()
     var gameOverView =  UIView()
     var gameInPlay = false
     var clickCounter = 0
@@ -23,6 +24,7 @@ class GameViewController: UIViewController {
     var counter = gameLength
     let savedScores = NSUserDefaults.standardUserDefaults()
     var hiscore = 0
+    var newHiScore = false
     
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
@@ -47,22 +49,25 @@ class GameViewController: UIViewController {
         self.view.addSubview(green)
         self.view.addSubview(press)
         
-        gameOverView.bounds = CGRect(x: screenSize.width/2, y: screenSize.height/2, width: screenSize.width, height: screenSize.height)
+        gameOverView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
         gameOverView.hidden = true
         gameOverView.backgroundColor = UIColor.whiteColor()
         
         
-        restartGameButton.frame = CGRect(x: gameOverView.bounds.width/2, y: gameOverView.bounds.height/2, width: 150, height: 100)
-        print(gameOverView.bounds)
-        print(self.view.bounds)
-        restartGameButton.frame.origin = CGPoint(x: gameOverView.bounds.width/2, y: gameOverView.bounds.height/2)
+        restartGameButton.frame = CGRect(x: gameOverView.frame.width/2-75, y: gameOverView.frame.height/2-15, width: 150, height: 30)
         restartGameButton.setTitle("Restart Game", forState: .Normal)
         restartGameButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
         restartGameButton.addTarget(self, action: #selector(GameViewController.restartGameButtonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
+        newHiScoreLabel.hidden = true
+        newHiScoreLabel.textColor = UIColor.blueColor()
+        newHiScoreLabel.frame = CGRect(x: gameOverView.frame.width/2-90, y: gameOverView.frame.height/2-65, width: 180, height: 30)
+
+        
         
         self.view.addSubview(gameOverView)
         gameOverView.addSubview(restartGameButton)
+        gameOverView.addSubview(newHiScoreLabel)
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,6 +104,9 @@ class GameViewController: UIViewController {
         green.hidden = true
         gameOverView.hidden = false
         if (clickCounter > hiscore) {
+            newHiScore = true
+            newHiScoreLabel.hidden = false
+            newHiScoreLabel.text = "Your New Hiscore is: \(clickCounter)"
             savedScores.setValue(clickCounter, forKey: "hiscore")
         }
     }
@@ -123,6 +131,9 @@ class GameViewController: UIViewController {
         press.hidden = false
         gameInPlay = true
         counter = gameLength
+        clickCounter = 0
+        newHiScoreLabel.hidden = true
+        score.text = "Score 0"
         startGame()
     }
     
