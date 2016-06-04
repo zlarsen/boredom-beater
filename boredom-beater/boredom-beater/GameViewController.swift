@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import AdSupport
 
 let gameLength = 10.0
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, FlurryAdBannerDelegate {
+    
+    let adBanner =  FlurryAdBanner(space: "BOREDOMBEATERAD")
     
     var timer = NSTimer()
     var press = UIButton()
@@ -41,7 +44,7 @@ class GameViewController: UIViewController {
         green.setTitleColor(UIColor.greenColor(), forState: .Normal)
         green.addTarget(self, action: #selector(GameViewController.greenButtonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
-        press.frame = CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height/2, width: 100, height: 100)
+        press.frame = CGRect(x: self.view.bounds.width/2-50, y: self.view.bounds.height/2-50, width: 100, height: 100)
         press.setTitle("Punch", forState: .Normal)
         press.setTitleColor(UIColor.redColor(), forState: .Normal)
         press.addTarget(self, action: #selector(GameViewController.pressButtonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
@@ -50,9 +53,8 @@ class GameViewController: UIViewController {
         self.view.addSubview(press)
         
         gameOverView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
-        gameOverView.hidden = true
         gameOverView.backgroundColor = UIColor.whiteColor()
-        
+        gameOverView.hidden = true
         
         restartGameButton.frame = CGRect(x: gameOverView.frame.width/2-75, y: gameOverView.frame.height/2-15, width: 150, height: 30)
         restartGameButton.setTitle("Restart Game", forState: .Normal)
@@ -68,6 +70,14 @@ class GameViewController: UIViewController {
         self.view.addSubview(gameOverView)
         gameOverView.addSubview(restartGameButton)
         gameOverView.addSubview(newHiScoreLabel)
+        
+        hiscore = initializeCounters("hiscore")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        adBanner.adDelegate = self
+        adBanner.fetchAdForFrame(self.gameOverView.frame)
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,7 +94,6 @@ class GameViewController: UIViewController {
         timer.invalidate()
         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         gameInPlay = true
-//        gameLoop()
     }
     
     func updateCounter() {
@@ -108,6 +117,7 @@ class GameViewController: UIViewController {
             newHiScoreLabel.hidden = false
             newHiScoreLabel.text = "Your New Hiscore is: \(clickCounter)"
             savedScores.setValue(clickCounter, forKey: "hiscore")
+            hiscore = initializeCounters("hiscore")
         }
     }
     
@@ -164,6 +174,16 @@ class GameViewController: UIViewController {
         } else {
         }
         return countVal
+    }
+    
+    func adBannerDidFetchAd(bannerAd: FlurryAdBanner!) {
+        // Received Ad
+        print("adFetched")
+        adBanner.displayAdInView(self.gameOverView, viewControllerForPresentation: self)
+    }
+    func adBannerDidRender(bannerAd: FlurryAdBanner!) {
+        print("ad rendered")
+        // For when your ad renders. Nice to check to make sure your ad is working
     }
 }
 
