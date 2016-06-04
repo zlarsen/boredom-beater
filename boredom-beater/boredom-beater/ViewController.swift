@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var highScoreLabel: UILabel!
+    let savedScores = NSUserDefaults.standardUserDefaults()
+    var hiscore = 0
+    
 
     @IBAction func startGameButton(sender: AnyObject) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
@@ -25,6 +30,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        hiscore = initializeCounters("hiscore")
+        highScoreLabel.text = "High Score: \(hiscore)"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +40,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    func initializeCounters(name: String) -> Int {
+        let countVal = savedScores.integerForKey(name)
+        if (countVal == 0){
+            savedScores.setInteger(0, forKey: name)
+        } else {
+        }
+        return countVal
+    }
 }
 

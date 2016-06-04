@@ -27,28 +27,6 @@
                                 <color key="textColor" red="0.9808834716" green="1" blue="0.14898197599999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-VW-3KJ">
-                                <rect key="frame" x="277" y="285" width="47" height="30"/>
-                                <state key="normal" title="Punch">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.010267665139986448" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressButton:" destination="NO8-Dp-DDa" eventType="touchUpInside" id="cBL-Pw-rwA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQy-Ys-Tkb">
-                                <rect key="frame" x="491" y="500" width="73" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="dIE-uJ-UMa"/>
-                                    <constraint firstAttribute="width" constant="73" id="yrW-oI-mjq"/>
-                                </constraints>
-                                <state key="normal" title="+5 Sec">
-                                    <color key="titleColor" red="0.042397469187943404" green="1" blue="0.18838217758204412" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="greenButton:" destination="NO8-Dp-DDa" eventType="touchUpInside" id="xSj-Iv-fYZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time 10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-co-aco">
                                 <rect key="frame" x="9" y="28" width="92" height="21"/>
                                 <constraints>
@@ -61,21 +39,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.063954111821345763" blue="0.68950425392670156" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fNx-VW-3KJ" firstAttribute="centerY" secondItem="qdU-ew-8S5" secondAttribute="centerY" id="1hK-pT-cFN"/>
-                            <constraint firstItem="VM3-v7-R5V" firstAttribute="trailing" secondItem="gQy-Ys-Tkb" secondAttribute="trailing" constant="36" id="4dS-rR-y7s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VM3-v7-R5V" secondAttribute="trailing" constant="-20" id="HIQ-Be-Nkh"/>
                             <constraint firstItem="8eG-co-aco" firstAttribute="top" secondItem="ihl-RJ-mOF" secondAttribute="bottom" constant="8" symbolic="YES" id="Iyu-KK-3gT"/>
-                            <constraint firstItem="4G2-1U-KLY" firstAttribute="top" secondItem="gQy-Ys-Tkb" secondAttribute="bottom" constant="45" id="PKs-eW-Af8"/>
                             <constraint firstItem="VM3-v7-R5V" firstAttribute="top" secondItem="ihl-RJ-mOF" secondAttribute="bottom" constant="7" id="fdh-6q-4FY"/>
                             <constraint firstItem="8eG-co-aco" firstAttribute="leading" secondItem="qdU-ew-8S5" secondAttribute="leadingMargin" constant="-11" id="k5g-Sz-zbN"/>
-                            <constraint firstItem="fNx-VW-3KJ" firstAttribute="centerX" secondItem="qdU-ew-8S5" secondAttribute="centerX" id="pOb-vL-Kh5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="green" destination="gQy-Ys-Tkb" id="hKv-k7-ifo"/>
-                        <outlet property="press" destination="fNx-VW-3KJ" id="u6M-15-D9v"/>
                         <outlet property="score" destination="VM3-v7-R5V" id="7ew-Vl-AY3"/>
-                        <outlet property="timer" destination="8eG-co-aco" id="8dv-Gf-G4q"/>
+                        <outlet property="timerLabel" destination="8eG-co-aco" id="9EC-Q3-kTz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZh-mj-cm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,6 +125,9 @@
                             <constraint firstItem="eJK-IJ-gqH" firstAttribute="leading" secondItem="FJt-0T-f7n" secondAttribute="leading" id="z74-HQ-Se5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="l9T-aJ-4oP" id="a61-wa-cGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
