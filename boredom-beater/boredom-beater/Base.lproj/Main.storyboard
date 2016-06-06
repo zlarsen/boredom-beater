@@ -161,16 +161,24 @@
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xE2-cy-SDR">
-                                <rect key="frame" x="180" y="157" width="240" height="181"/>
+                                <rect key="frame" x="161" y="119" width="287" height="239"/>
                                 <color key="backgroundColor" red="0.85663448949999998" green="0.0" blue="0.80395050430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="FDh-Lj-nk5"/>
-                                    <constraint firstAttribute="height" constant="181" id="gWc-cX-g4b"/>
+                                    <constraint firstAttribute="width" constant="287" id="AZd-Ow-37W"/>
+                                    <constraint firstAttribute="width" constant="287" id="PfJ-gb-0O8"/>
+                                    <constraint firstAttribute="height" constant="239" id="WfU-GR-UuD"/>
+                                    <constraint firstAttribute="width" constant="287" id="pm6-7f-2tZ"/>
                                 </constraints>
-                                <string key="text">The first thing you do is press start at the home screen. Then you tap the button and you have a limited time to press it once you start. Every ten times you tap the button(not inlcuding start) there will be a small green button that you can press to gain five seconds it has a smaller window of time to press it.</string>
+                                <string key="text">The first thing you do is press start at the home screen. Then you tap the button and you have a limited time to press it once you start. Every ten times you tap the button(not including start) there will be a small green button that you can press to gain five seconds it has a smaller window of time to press it.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AZd-Ow-37W"/>
+                                        <exclude reference="pm6-7f-2tZ"/>
+                                    </mask>
+                                </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1h-o1-UhJ">
                                 <rect key="frame" x="257" y="377" width="86" height="30"/>
@@ -203,25 +211,32 @@
                         <color key="backgroundColor" red="0.85663448952879584" green="0.0" blue="0.80395050433805393" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dkZ-rK-PRe" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" id="4e7-rf-5DC"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" constant="4.5" id="7Tg-FQ-ETP"/>
                             <constraint firstItem="xE2-cy-SDR" firstAttribute="centerY" secondItem="ccE-1k-Qx9" secondAttribute="centerY" id="BJK-b6-tEG"/>
-                            <constraint firstItem="s1h-o1-UhJ" firstAttribute="top" secondItem="xE2-cy-SDR" secondAttribute="bottom" constant="39" id="BsN-ag-IdD"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="top" secondItem="ccE-1k-Qx9" secondAttribute="top" constant="119" id="C5t-l5-Fqg"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="leading" secondItem="ccE-1k-Qx9" secondAttribute="leading" constant="161" id="D81-YF-nfb"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="top" secondItem="8Is-Kl-YkA" secondAttribute="bottom" constant="20" id="MLO-TG-qNg"/>
                             <constraint firstItem="s1h-o1-UhJ" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" id="OJM-Yh-AtX"/>
-                            <constraint firstItem="xE2-cy-SDR" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" id="atT-cc-Eol"/>
+                            <constraint firstItem="s1h-o1-UhJ" firstAttribute="top" secondItem="xE2-cy-SDR" secondAttribute="bottom" constant="19" id="alm-LW-ta4"/>
                             <constraint firstItem="dkZ-rK-PRe" firstAttribute="top" secondItem="s1h-o1-UhJ" secondAttribute="bottom" constant="50" id="fJo-Rh-1Sa"/>
-                            <constraint firstItem="xE2-cy-SDR" firstAttribute="top" secondItem="8Is-Kl-YkA" secondAttribute="bottom" constant="58" id="gBJ-q3-sxS"/>
-                            <constraint firstItem="xE2-cy-SDR" firstAttribute="top" secondItem="ccE-1k-Qx9" secondAttribute="top" constant="157" id="hqd-1M-wvr"/>
+                            <constraint firstItem="8Is-Kl-YkA" firstAttribute="centerX" secondItem="s1h-o1-UhJ" secondAttribute="centerX" id="hZ5-ck-3oM"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" id="hsT-t7-AbW"/>
                             <constraint firstItem="8Is-Kl-YkA" firstAttribute="top" secondItem="1Qh-eo-xua" secondAttribute="bottom" id="jag-6q-x5p"/>
-                            <constraint firstItem="8Is-Kl-YkA" firstAttribute="centerX" secondItem="xE2-cy-SDR" secondAttribute="centerX" id="mSd-5G-u4B"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="leading" secondItem="ccE-1k-Qx9" secondAttribute="leading" constant="161" id="myb-sd-GcU"/>
                             <constraint firstItem="s1h-o1-UhJ" firstAttribute="top" secondItem="xE2-cy-SDR" secondAttribute="bottom" constant="39" id="rg6-zT-eVk"/>
                             <constraint firstAttribute="bottom" secondItem="s1h-o1-UhJ" secondAttribute="bottom" constant="181" id="uUZ-J3-wCH"/>
                             <constraint firstItem="xE2-cy-SDR" firstAttribute="top" secondItem="8Is-Kl-YkA" secondAttribute="bottom" constant="58" id="v0s-Jp-96o"/>
-                            <constraint firstItem="s1h-o1-UhJ" firstAttribute="centerX" secondItem="xE2-cy-SDR" secondAttribute="centerX" id="ySN-zt-k4d"/>
+                            <constraint firstItem="xE2-cy-SDR" firstAttribute="centerX" secondItem="ccE-1k-Qx9" secondAttribute="centerX" id="vWe-cH-IjR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="jag-6q-x5p"/>
                                 <exclude reference="BJK-b6-tEG"/>
+                                <exclude reference="D81-YF-nfb"/>
+                                <exclude reference="hsT-t7-AbW"/>
+                                <exclude reference="myb-sd-GcU"/>
                                 <exclude reference="v0s-Jp-96o"/>
+                                <exclude reference="vWe-cH-IjR"/>
                                 <exclude reference="rg6-zT-eVk"/>
                                 <exclude reference="uUZ-J3-wCH"/>
                             </mask>
